@@ -1,0 +1,215 @@
+2022-11-22 16:06:24.646 training pipeline config: [trainingpipelineconfig(artifact_dir='D:\\ml\\adult_census\\census\\artifact')]
+2022-11-22 16:06:24.654 pipeline starting.
+2022-11-22 16:06:24.654 data ingestion config: [dataingestionconfig(dataset_download_url='overload10/adult-census-dataset', dataset_file_name='adult.csv', raw_data_dir='D:\\ml\\adult_census\\census\\artifact\\data_ingestion\\2022-11-22-16-06-24\\raw_data', tgz_download_dir='D:\\ml\\adult_census\\census\\artifact\\data_ingestion\\2022-11-22-16-06-24\\tgz_data', zip_File_name='adult.csv.zip', ingested_dir='D:\\ml\\adult_census\\census\\artifact\\data_ingestion\\2022-11-22-16-06-24\\ingested_data', ingested_train_dir='D:\\ml\\adult_census\\census\\artifact\\data_ingestion\\2022-11-22-16-06-24\\ingested_data\\train', ingested_test_dir='D:\\ml\\adult_census\\census\\artifact\\data_ingestion\\2022-11-22-16-06-24\\ingested_data\\test')].
+2022-11-22 16:06:24.654 ====================Data Ingestion log started.==================== 
+2022-11-22 16:06:24.654 downloding file from [overload10/adult-census-dataset] into [D:\ml\adult_census\census\artifact\data_ingestion\2022-11-22-16-06-24\tgz_data].
+2022-11-22 16:06:30.204 [D:\ml\adult_census\census\artifact\data_ingestion\2022-11-22-16-06-24\tgz_data] is downloaded sucessfully using kaggle api.
+2022-11-22 16:06:30.228 extract tgz_file[D:\ml\adult_census\census\artifact\data_ingestion\2022-11-22-16-06-24\tgz_data\adult.csv.zip] into [D:\ml\adult_census\census\artifact\data_ingestion\2022-11-22-16-06-24\raw_data].
+2022-11-22 16:06:30.251 extraction completed.
+2022-11-22 16:06:30.251 read csv file[adult.csv]
+2022-11-22 16:06:30.354 split data in to train and test.
+2022-11-22 16:06:30.393 exporting train dataset into file [D:\ml\adult_census\census\artifact\data_ingestion\2022-11-22-16-06-24\ingested_data\train\adult.csv]
+2022-11-22 16:06:30.544 exporting test dataset to file [D:\ml\adult_census\census\artifact\data_ingestion\2022-11-22-16-06-24\ingested_data\test\adult.csv]
+2022-11-22 16:06:30.608 data ingestion artifact [DataIngestArtifact(train_file_path='D:\\ml\\adult_census\\census\\artifact\\data_ingestion\\2022-11-22-16-06-24\\ingested_data\\train\\adult.csv', test_file_path='D:\\ml\\adult_census\\census\\artifact\\data_ingestion\\2022-11-22-16-06-24\\ingested_data\\test\\adult.csv', message='data ingestion completed sucessfully.')]
+2022-11-22 16:06:30.608 ==================== data ingestion log complete. ====================
+
+
+2022-11-22 16:06:30.608 data validation config datavalidationconfig(schema_file_path='D:\\ml\\adult_census\\yaml_config\\schema.yaml', report_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\data_drift_report.html', valid_data_dir='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data', vaild_train_dir='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\train', valid_test_dir='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\test').
+2022-11-22 16:06:30.608 ====================Data validation log started.==================== 
+2022-11-22 16:06:30.608 checking is train and test data are available.
+2022-11-22 16:06:30.608 Is train and test file exists ? True.
+2022-11-22 16:06:30.766 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\train\valid_data.csv
+2022-11-22 16:06:30.853 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\test\valid_data.csv
+2022-11-22 16:06:30.900 validation status is True.
+2022-11-22 16:06:30.900 data validation artifact is DataValidationArtifact(schema_file_path='D:\\ml\\adult_census\\yaml_config\\schema.yaml', report_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\data_drift_report.html', valid_train_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\train\\valid_data.csv', valid_test_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\test\\valid_data.csv', message='data validation perform sucessfully.').
+2022-11-22 16:06:31.044 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\train\valid_data.csv
+2022-11-22 16:06:31.123 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\test\valid_data.csv
+2022-11-22 16:06:31.155 validation status is True.
+2022-11-22 16:06:31.155 data validation artifact is DataValidationArtifact(schema_file_path='D:\\ml\\adult_census\\yaml_config\\schema.yaml', report_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\data_drift_report.html', valid_train_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\train\\valid_data.csv', valid_test_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\test\\valid_data.csv', message='data validation perform sucessfully.').
+2022-11-22 16:06:31.249 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\train\valid_data.csv
+2022-11-22 16:06:31.336 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\test\valid_data.csv
+2022-11-22 16:06:31.384 validation status is True.
+2022-11-22 16:06:31.384 data validation artifact is DataValidationArtifact(schema_file_path='D:\\ml\\adult_census\\yaml_config\\schema.yaml', report_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\data_drift_report.html', valid_train_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\train\\valid_data.csv', valid_test_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\test\\valid_data.csv', message='data validation perform sucessfully.').
+2022-11-22 16:06:32.976 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\train\valid_data.csv
+2022-11-22 16:06:33.048 exporting valid_training data into file D:\ml\adult_census\census\artifact\data_validation\2022-11-22-16-06-24\valid_data\test\valid_data.csv
+2022-11-22 16:06:33.079 validation status is True.
+2022-11-22 16:06:33.079 data validation artifact is DataValidationArtifact(schema_file_path='D:\\ml\\adult_census\\yaml_config\\schema.yaml', report_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\data_drift_report.html', valid_train_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\train\\valid_data.csv', valid_test_file_path='D:\\ml\\adult_census\\census\\artifact\\data_validation\\2022-11-22-16-06-24\\valid_data\\test\\valid_data.csv', message='data validation perform sucessfully.').
+2022-11-22 16:06:33.094 ==================== data validation log complete. ====================
+
+
+2022-11-22 16:06:33.094 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-11-22 16:06:33.094 Obtaining preprocessing object.
+2022-11-22 16:06:33.094 categorical columns: ['workclass', 'education', 'occupation', 'sex', 'country']
+2022-11-22 16:06:33.094 Numerical columns: ['age', 'hours_per_week']
+2022-11-22 16:06:33.094 Obtaining training and test file path.
+2022-11-22 16:06:33.094 Loading training and test data as pandas dataframe.
+2022-11-22 16:06:33.150 Splitting input and target feature from training and testing dataframe.
+2022-11-22 16:06:33.150 Applying preprocessing object on training dataframe and testing dataframe
+2022-11-22 16:06:33.245 Saving transformed training and testing array.
+2022-11-22 16:06:33.261 Saving preprocessing object.
+2022-11-22 16:06:33.277 Data transformationa artifact: DataTransformationArtifact(transformed_train_file_path='D:\\ml\\adult_census\\census\\artifact\\data_transformation\\2022-11-22-16-06-24\\transformed_data\\train\\valid_data.npz', transfromed_test_file_path='D:\\ml\\adult_census\\census\\artifact\\data_transformation\\2022-11-22-16-06-24\\transformed_data\\test\\valid_data.npz', preprocessing_object_file_path='D:\\ml\\adult_census\\census\\artifact\\data_transformation\\2022-11-22-16-06-24\\preprocessed\\preprocessed.pkl', message='Data transformation successfull.')
+2022-11-22 16:06:33.277 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Data Transformation log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+
+
+2022-11-22 16:06:33.277 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-11-22 16:06:33.277 loading transformed train dataset.
+2022-11-22 16:06:33.292 loading transformed test dataset.
+2022-11-22 16:06:33.308 Splitting training and testing input and target feature
+2022-11-22 16:06:33.308 Extracting model config file path
+2022-11-22 16:06:33.308 Initializing model factory class using above model config file: yaml_config\model.yaml
+2022-11-22 16:06:33.316 Executing command: from <module 'sklearn.linear_model' from 'D:\\ml\\adult_census\\venv\\lib\\site-packages\\sklearn\\linear_model\\__init__.py'> import LogisticRegression
+2022-11-22 16:06:44.360 model is trained in train dataset: LogisticRegression(max_iter=4000, solver='sag')
+2022-11-22 16:06:44.360 Saving model at path: D:\ml\adult_census\census\artifact\model_training\2022-11-22-16-06-24\trained_model\model.pkl
+2022-11-22 16:06:44.360 model trainer artifact ModelTrainerArtifact(message='model training successfully.', trained_model_file_path='D:\\ml\\adult_census\\census\\artifact\\model_training\\2022-11-22-16-06-24\\trained_model\\model.pkl', base_accuracy=0.7).
+2022-11-22 16:06:44.360 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model trainer log completed.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-11-22 16:06:44.360 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Model evaluation log started.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< 
+2022-11-22 16:06:44.360 loading transformed test dataset.
+2022-11-22 16:06:44.376 Splitting training and testing input and target feature
+2022-11-22 16:06:44.376 load train model D:\ml\adult_census\census\artifact\model_training\2022-11-22-16-06-24\trained_model\model.pkl.
+2022-11-22 16:06:44.376 train model is accepted? : True.
+2022-11-22 16:06:44.391 loading transformed test dataset.
+2022-11-22 16:06:44.391 Splitting training and testing input and target feature
+2022-11-22 16:06:44.391 load train model D:\ml\adult_census\census\artifact\model_training\2022-11-22-16-06-24\trained_model\model.pkl.
+2022-11-22 16:06:44.407 evaluation report = {'0.0': {'precision': 0.8353894533139816, 'recall': 0.9312390454361602, 'f1-score': 0.8807140580172139, 'support': 7417}, '1.0': {'precision': 0.6602265156562291, 'recall': 0.421343537414966, 'f1-score': 0.514404360238775, 'support': 2352}, 'accuracy': 0.808475790766711, 'macro avg': {'precision': 0.7478079844851053, 'recall': 0.6762912914255631, 'f1-score': 0.6975592091279945, 'support': 9769}, 'weighted avg': {'precision': 0.7932169454451072, 'recall': 0.808475790766711, 'f1-score': 0.7925207517243602, 'support': 9769}}.
+2022-11-22 16:06:44.423 loading transformed test dataset.
+2022-11-22 16:06:44.423 Splitting training and testing input and target feature
+2022-11-22 16:06:44.423 load train model D:\ml\adult_census\census\artifact\model_training\2022-11-22-16-06-24\trained_model\model.pkl.
+2022-11-22 16:06:44.438 evaluation report = {'0.0': {'precision': 0.8353894533139816, 'recall': 0.9312390454361602, 'f1-score': 0.8807140580172139, 'support': 7417}, '1.0': {'precision': 0.6602265156562291, 'recall': 0.421343537414966, 'f1-score': 0.514404360238775, 'support': 2352}, 'accuracy': 0.808475790766711, 'macro avg': {'precision': 0.7478079844851053, 'recall': 0.6762912914255631, 'f1-score': 0.6975592091279945, 'support': 9769}, 'weighted avg': {'precision': 0.7932169454451072, 'recall': 0.808475790766711, 'f1-score': 0.7925207517243602, 'support': 9769}}.
+2022-11-22 16:06:44.438 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> model evaluation log is complete.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-11-22 16:06:44.438 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> model pusher log stared. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-11-22 16:06:46.212 model upload to s3 bucket .
+2022-11-22 16:06:47.837 download model from the s3 bucket at {saved_model_path}
+2022-11-22 16:06:49.958 download model from the s3 bucket at {saved_model_path}
+2022-11-22 16:06:49.958 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> model pusher log completed. <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2022-11-22 16:07:43.090 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\legacy_caching\caching.py", line 584, in get_or_create_cached_value
+    return_value = _read_from_cache(
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\legacy_caching\caching.py", line 345, in _read_from_cache
+    raise e
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\legacy_caching\caching.py", line 330, in _read_from_cache
+    return _read_from_mem_cache(
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\legacy_caching\caching.py", line 248, in _read_from_mem_cache
+    raise CacheKeyNotFoundError("Key not found in mem cache")
+streamlit.runtime.legacy_caching.caching.CacheKeyNotFoundError: Key not found in mem cache
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ml\adult_census\census\entity\census_predictor.py", line 73, in predict
+    predicted_salary = model.predict(X)
+  File "D:\ml\adult_census\census\components\model_trainer.py", line 28, in predict
+    transformed_feature = self.preprocessing_object.transform(X)
+  File "D:\ml\adult_census\venv\lib\site-packages\sklearn\compose\_column_transformer.py", line 763, in transform
+    Xs = self._fit_transform(
+  File "D:\ml\adult_census\venv\lib\site-packages\sklearn\compose\_column_transformer.py", line 621, in _fit_transform
+    return Parallel(n_jobs=self.n_jobs)(
+  File "D:\ml\adult_census\venv\lib\site-packages\joblib\parallel.py", line 1088, in __call__
+    while self.dispatch_one_batch(iterator):
+  File "D:\ml\adult_census\venv\lib\site-packages\joblib\parallel.py", line 901, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "D:\ml\adult_census\venv\lib\site-packages\joblib\parallel.py", line 819, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "D:\ml\adult_census\venv\lib\site-packages\joblib\_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "D:\ml\adult_census\venv\lib\site-packages\joblib\_parallel_backends.py", line 597, in __init__
+    self.results = batch()
+  File "D:\ml\adult_census\venv\lib\site-packages\joblib\parallel.py", line 288, in __call__
+    return [func(*args, **kwargs)
+  File "D:\ml\adult_census\venv\lib\site-packages\joblib\parallel.py", line 288, in <listcomp>
+    return [func(*args, **kwargs)
+  File "D:\ml\adult_census\venv\lib\site-packages\sklearn\utils\fixes.py", line 117, in __call__
+    return self.function(*args, **kwargs)
+  File "D:\ml\adult_census\venv\lib\site-packages\sklearn\pipeline.py", line 853, in _transform_one
+    res = transformer.transform(X)
+  File "D:\ml\adult_census\venv\lib\site-packages\sklearn\pipeline.py", line 635, in transform
+    Xt = transform.transform(Xt)
+  File "D:\ml\adult_census\venv\lib\site-packages\sklearn\preprocessing\_encoders.py", line 882, in transform
+    X_int, X_mask = self._transform(
+  File "D:\ml\adult_census\venv\lib\site-packages\sklearn\preprocessing\_encoders.py", line 160, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories [' students'] in column 2 during transform
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 100, in <module>
+    main()
+  File "D:\ml\adult_census\app.py", line 89, in main
+    result=predict(age=age,
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\legacy_caching\caching.py", line 618, in wrapped_func
+    return get_or_create_cached_value()
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\legacy_caching\caching.py", line 602, in get_or_create_cached_value
+    return_value = non_optional_func(*args, **kwargs)
+  File "D:\ml\adult_census\app.py", line 30, in predict
+    predicted_value = census_predictor.predict(X=census_df)
+  File "D:\ml\adult_census\census\entity\census_predictor.py", line 83, in predict
+    raise classificationException(e, sys) from e
+census.exception.classificationException: Error occured in script: [D:\ml\adult_census\census\entity\census_predictor.py] at line number: [73] error message: [Found unknown categories [' students'] in column 2 during transform]
+2022-11-22 16:16:17.635 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 117, in <module>
+    main()
+  File "D:\ml\adult_census\app.py", line 72, in main
+    test = st.selectbox(lis)
+TypeError: selectbox() missing 1 required positional argument: 'options'
+2022-11-22 16:16:54.708 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 116, in <module>
+    main()
+  File "D:\ml\adult_census\app.py", line 72, in main
+    workclass = st.selectbox("workclass",
+TypeError: selectbox() takes from 3 to 10 positional arguments but 11 were given
+2022-11-22 16:43:19.075 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 127, in <module>
+    main()
+  File "D:\ml\adult_census\app.py", line 46, in main
+    with st.sidebar():
+TypeError: 'DeltaGenerator' object is not callable
+2022-11-22 16:44:40.295 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 127, in <module>
+    main()
+  File "D:\ml\adult_census\app.py", line 46, in main
+    st.sidebar()
+TypeError: 'DeltaGenerator' object is not callable
+2022-11-22 16:45:26.765 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 43, in <module>
+    with st.sidebar():
+TypeError: 'DeltaGenerator' object is not callable
+2022-11-22 16:45:49.091 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 43, in <module>
+    with st.sidebar("About"):
+TypeError: 'DeltaGenerator' object is not callable
+2022-11-22 16:46:54.777 Uncaught app exception
+Traceback (most recent call last):
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 556, in _run_script
+    exec(code, module.__dict__)
+  File "D:\ml\adult_census\app.py", line 123, in <module>
+    main()
+  File "D:\ml\adult_census\app.py", line 53, in main
+    st.set_page_config(layout="wide")
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\commands\page_config.py", line 163, in set_page_config
+    ctx.enqueue(msg)
+  File "D:\ml\adult_census\venv\lib\site-packages\streamlit\runtime\scriptrunner\script_run_context.py", line 80, in enqueue
+    raise StreamlitAPIException(
+streamlit.errors.StreamlitAPIException: `set_page_config()` can only be called once per app, and must be called as the first Streamlit command in your script.
+
+For more information refer to the [docs](https://docs.streamlit.io/library/api-reference/utilities/st.set_page_config).

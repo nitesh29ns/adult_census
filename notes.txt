@@ -1,0 +1,8 @@
+model to be used in this project is [logistic Regression]
+[from sklearn.linear_model import LogisticRegression]
+best estimaters = {'max_iter': 4000, 'penalty': 'l2', 'solver': 'sag'}
+
+## to run streamlit with log file
+ --streamlit run app.py --logger.level=info 2>logs.txt
+
+

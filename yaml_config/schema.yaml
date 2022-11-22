@@ -1,0 +1,35 @@
+columns:
+  - age
+  - workclass
+  - education
+  - occupation
+  - sex
+  - hours_per_week
+  - country
+  - salary
+
+
+target_columns: salary
+
+
+
+
+numerical_columns:
+  - age
+  - hours_per_week
+
+categorical_columns:
+  - workclass
+  - education
+  - occupation
+  - sex
+  - country
+
+columns_dtypes:
+  age: int64
+  workclass: catagory
+  education: catagory
+  occupation: catagory
+  sex: catagory
+  hours_per_week: int64
+  country: catagory

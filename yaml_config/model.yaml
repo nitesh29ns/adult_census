@@ -1,0 +1,8 @@
+model :
+  class : LogisticRegression
+  module : sklearn.linear_model
+  params :
+    max_iter : 4000
+    penalty : l2
+    solver : sag
+    

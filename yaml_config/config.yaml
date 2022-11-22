@@ -1,0 +1,46 @@
+training_pipeline_config:
+  pipeline_name: census
+  artifact_dir: artifact
+
+data_ingestion_config:
+  dataset_download_url: overload10/adult-census-dataset
+  dataset_file_name: adult.csv
+  raw_data_dir: raw_data
+  tgz_download_dir: tgz_data
+  zip_File_name : adult.csv.zip
+  ingested_dir: ingested_data
+  ingested_train_dir: train
+  ingested_test_dir: test 
+
+
+data_validation_config:
+  schema_dir: yaml_config
+  schema_file_name: schema.yaml
+  report_file_path: data_drift_report.html
+  valid_data_dir : valid_data
+  valid_train_dir : train
+  valid_test_dir : test
+
+data_transformation_config:
+  transformed_dir : 'transformed_data'
+  transformed_train_dir : 'train'
+  transformed_test_dir : 'test'
+  preprocessing_dir : 'preprocessed'
+  preprocessed_object_file_name : 'preprocessed.pkl'
+
+model_trainer_config :
+  trained_model_dir : trained_model
+  model_file_name : model.pkl
+  base_accuracy : 0.7
+  model_config_dir : yaml_config
+  model_config_file_name : model.yaml
+
+
+model_evaluation_config:
+  evaluation_report_dir : 'evaluation_report'
+  evaluation_report_file_name : 'evaluation_report.csv'
+
+ 
+  
+model_pusher_config :
+  saved_model_dir : 'saved_model'

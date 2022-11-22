@@ -6,4 +6,11 @@ numpy
 PyYAML
 matplotlib
 seaborn
-gunicorn
+evidently
+streamlit==1.12.0
+kaggle
+dill
+boto3
+- e .
+
+
