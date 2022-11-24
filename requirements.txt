@@ -7,7 +7,7 @@ PyYAML
 matplotlib
 seaborn
 evidently
-streamlit==1.12.0
+streamlit
 kaggle
 dill
 boto3

@@ -8,6 +8,7 @@ from census.components.data_ingestion import DataIngestion
 from census.config.configuration import configration
 from census.constant import *
 from census.entity.census_predictor import CensusData, CensusPredictor
+import webbrowser
 
 import os, sys
 
@@ -39,9 +40,19 @@ def start_pipeline():
     except Exception as e:
         raise classificationException(e, sys)
 
+url = "https://github.com/nitesh29ns/adult_census"
+
 def main():
     st.set_page_config(layout="wide")
 
+    with st.sidebar.header("test"):
+        st.write(f'''
+            <href={url}>
+            ''',
+            unsafe_allow_html=True)
+
+        if st.button("github"):
+            webbrowser.open_new_tab(url)
 
     with st.expander("Initiate ML Pipeline..."):
         result = ""

@@ -17,7 +17,7 @@ import os, sys
 SAVED_MODELS_DIR_NAME = "saved_model"
 MODEL_DIR = os.path.join(ROOT_DIR, SAVED_MODELS_DIR_NAME)
 
-@st.cache
+
 def predict(age,workclass,education,occupation,sex,hours_per_week,country):
     census_data = CensusData(age=age,
                                 workclass=workclass,
@@ -41,11 +41,31 @@ def start_pipeline():
     except Exception as e:
         raise classificationException(e, sys)
 
-github_url = "https://github.com/nitesh29ns/adult_census"
-linkdin_url = "https://www.linkedin.com/in/nitesh-sharma-0a260b183/"
+
+
+work = ["local-gov", "private", "self-emp-not-inc","state-gov","self-emp-inc","federal-gov","never-worked","without-pay","?"]
+occ_input = ["craft-repair","exec-managerial","prof-specialty","adm-clerical","sales","machine-op-inspct","transport-moving","handlers-cleaners","farming-fishing","tech-support","protective-serv","priv-house-serv","armed-forces","other-service","?"]
+edu_input = [ "HS-grad",
+            "Some-college",  
+            "Bachelors",      
+            "Masters",          
+            "Assoc-voc",        
+            "11th",             
+            "Assoc-acdm",       
+            "10th",             
+            "7th-8th",           
+            "Prof-school",       
+            "9th",               
+            "12th",              
+            "Doctorate",         
+            "5th-6th",          
+            "1st-4th",           
+            "Preschool"]
+
 
 
 def main():
+    
     st.set_page_config(layout="wide")
 
     with st.sidebar:
@@ -53,15 +73,11 @@ def main():
         st.write("""
                 My Name is Nitesh Sharma and This is my Intership project under ineuron Intership.
                 ***
+                github :- https://github.com/nitesh29ns/adult_census
+                 
+                linkdin :- https://www.linkedin.com/in/nitesh-sharma-0a260b183/
                 """)
 
-        if st.button("Github ✅"):
-            webbrowser.open_new_tab(github_url)
-
-        if st.button("Linkdin ✅"):
-            webbrowser.open_new_tab(linkdin_url)
-
-    
     with st.container():
 
         st.title("Salary Predictor")
@@ -85,34 +101,10 @@ def main():
 
         st.markdown(html_temp,unsafe_allow_html=True)
 
-        age = st.number_input("age")
-        workclass = st.selectbox("workclass",[
-                                "local-gov",
-                                "private",
-                                "self-emp-not-inc",
-                                "state-gov",
-                                "self-emp-inc",
-                                "federal-gov",
-                                "never-worked",
-                                "without-pay",
-                                "?"])
-        education = st.text_input("education", "Type Here")
-        occupation = st.selectbox("occupation",                                                   
-                                  ["craft-repair",
-                                  "exec-managerial",
-                                  "prof-specialty",
-                                  "adm-clerical",
-                                  "sales",
-                                  "machine-op-inspct",
-                                  "transport-moving",
-                                  "handlers-cleaners",
-                                  "farming-fishing",
-                                  "tech-support",
-                                  "protective-serv",
-                                  "priv-house-serv",
-                                  "armed-forces",
-                                  "other-service",
-                                  "?"])
+        age = st.slider("age",min_value=16, max_value=90)
+        workclass = st.selectbox("workclass",work)
+        education = st.selectbox("education",edu_input)
+        occupation = st.selectbox("occupation",occ_input)
         sex = st.radio("sex", ["Male","Female"])
         hours_per_week = st.number_input("hours_per_week")
         country = st.text_input("country", "Type Here")
