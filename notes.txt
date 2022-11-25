@@ -10,3 +10,4 @@ best estimaters = {'max_iter': 4000, 'penalty': 'l2', 'solver': 'sag'}
 ## https://docs.streamlit.io/knowledge-base/tutorials/deploy/docker
 
 ADD COPY . ./ after workdir in docker filed
+
