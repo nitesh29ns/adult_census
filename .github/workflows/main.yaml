@@ -26,4 +26,4 @@ jobs:
           context: .
           file: Dockerfile.prod
           push: true
-          tags: <adult_census>/<salary-predictor>:latest
+          tags: <salary-predictor>:latest
